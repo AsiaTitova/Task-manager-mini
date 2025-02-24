@@ -1,0 +1,224 @@
+.Textarea {
+    position: relative;
+    width: 100%;
+
+    &_label {
+        display: inline-block;
+        font: $fontP4;
+        color: $textSecondary;
+        margin: 0 0 4px;
+    }
+
+    &_input {
+        width: 100%;
+        height: 80px;
+        border-radius: 8px;
+        padding: 14px 46px 14px 18px;
+        border: 1px solid transparent;
+        background: $bgSecondary;
+        outline: none;
+        transition: all 0.15s ease;
+        color: $textPrimary;
+        font: $fontP3;
+        resize: none;
+
+        &::placeholder {
+            color: $textSecondary;
+        }
+
+        &:hover {
+            background: $bgSecondaryHover;
+
+            &::placeholder {
+                color: $textPrimary;
+            }
+        }
+
+        &:focus-visible {
+            border: 1px dashed $borderFocus;
+        }
+
+        &:focus {
+            background: $bgPrimary;
+            border: 1px solid $borderAccent;
+        }
+    }
+
+    &_customPlaceholder {
+        position: absolute;
+        top: 14px;
+        left: 18px;
+        font: $fontP3;
+        color: $textSecondary;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+            fill: $iconSecondary;
+        }
+    }
+
+    &.icon .Textarea_input {
+        padding: 14px 46px;
+    }
+
+    &.icon.md .Textarea_input {
+        padding: 10px 40px;
+    }
+
+    &.disabled {
+        .Textarea_input {
+            background: $bgDisabled;
+            color: $textDisabled;
+
+            &::placeholder {
+                color: $textDisabled;
+            }
+        }
+
+        .Textarea_helpText {
+            color: $textDisabled;
+        }
+    }
+
+    &.round {
+        .Textarea_input {
+            border-radius: 16px;
+        }
+    }
+
+    &.noReset {
+        .Textarea_input {
+            padding: 14px 18px;
+        }
+    }
+
+    &.error {
+        .Textarea_input {
+            background: $bgPrimary;
+            border: 1px solid $borderCritical;
+            color: $textCritical;
+
+            &::placeholder {
+                color: $textCritical;
+            }
+        }
+
+        .Textarea_helpText {
+            color: $textCritical;
+        }
+
+        svg path {
+            fill: $iconCritical;
+        }
+    }
+
+    &_wrap {
+        position: relative;
+    }
+
+    &_icon {
+        position: absolute;
+        top: 14px;
+        left: 18px;
+        width: 20px;
+        height: 20px;
+
+        svg path {
+           fill: $iconSecondary;
+        }
+    }
+
+    &_helpText {
+        margin: 2px 0 0;
+        font: $fontP7;
+        color: $textSecondary;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.1s ease;
+    }
+
+    &.showHelpText .Textarea_helpText {
+        max-height: 1000px;
+        opacity: 1;
+    }
+
+    &_reset {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        background: transparent;
+        padding: 0;
+
+        svg {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &.md {
+        .Textarea_input {
+            padding: 10px 46px 10px 18px;
+            font: $fontP5;
+        }
+
+        .Textarea_label {
+            font: $fontP6;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .Textarea_icon {
+            top: 12px;
+            left: 16px;
+        }
+
+        .Textarea_reset {
+            top: 12px;
+            right: 16px;
+        }
+    }
+
+    &.sm {
+        .Textarea_input {
+            height: 32px;
+            padding: 8px 46px 8px 18px;
+            font: $fontP7;
+        }
+
+        &.round {
+            .Textarea_input {
+                border-radius: 12px;
+            }
+        }
+
+        &.icon {
+            .Textarea_input {
+                padding: 8px 34px;
+            }
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .Textarea_icon {
+            top: 8px;
+            left: 14px;
+        }
+
+        .Textarea_reset {
+            top: 12px;
+            right: 16px;
+        }
+    }
+}

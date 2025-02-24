@@ -1,0 +1,46 @@
+@mixin lg {
+  height: 48px;
+  padding: 12px 16px;
+  font: $fontP4;
+
+  svg {
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &.mini {
+    justify-content: center;
+    width: 48px;
+    padding: 14px;
+  }
+}
+
+@mixin md {
+  height: 40px;
+  padding: 12px 16px;
+  font: $fontP6;
+
+  &.mini {
+    width: 40px;
+    padding: 12px;
+  }
+}
+
+@mixin sm {
+  height: 32px;
+  padding: 9px 14px;
+  gap: 6px;
+  font: $fontP8;
+
+  svg {
+    min-width: 14px;
+    width: 14px;
+    height: 14px;
+  }
+
+  &.mini {
+    width: 32px;
+    padding: 9px;
+  }
+}

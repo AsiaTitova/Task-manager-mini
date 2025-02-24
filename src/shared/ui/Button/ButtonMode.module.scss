@@ -1,0 +1,88 @@
+@mixin secondary {
+  background: $bgAccentSubdued;
+  color: $textAccent;
+
+  svg path {
+    fill: $iconAccent;
+  }
+
+  &:hover {
+    background: $bgAccentSubduedHover;
+  }
+
+  &:active {
+    background: $bgAccentSubduedActive;
+  }
+
+  &:disabled {
+    background: $bgDisabled;
+  }
+}
+
+@mixin clear {
+  background: transparent;
+  color: $textAccent;
+
+  svg path {
+    fill: $iconAccent;
+  }
+
+  &:hover {
+    color: $textAccentHover;
+  }
+
+  &:active {
+    color: $textAccentActive;
+  }
+
+  &:disabled {
+    color: $textDisabled;
+    background: transparent;
+
+    svg path {
+      fill: $iconDisabled;
+    }
+  }
+}
+
+@mixin critical {
+  background: $bgCriticalSubdued;
+  color: $textCritical;
+
+  svg path {
+    fill: $iconCritical;
+  }
+
+  &:hover {
+    background: $bgCriticalSubduedHover;
+  }
+
+  &:active {
+    background: $bgCriticalSubduedActive;
+  }
+
+  &:disabled {
+    background: $bgDisabled;
+  }
+}
+
+@mixin criticalPrimary {
+  background: $bgCritical;
+  color: $textPrimaryInverse;
+
+  svg path {
+    fill: $iconPrimaryInverse;
+  }
+
+  &:hover {
+    background: $bgCriticalHover;
+  }
+
+  &:active {
+    background: $bgCriticalActive;
+  }
+
+  &:disabled {
+    background: $bgDisabled;
+  }
+}

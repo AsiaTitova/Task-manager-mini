@@ -1,0 +1,55 @@
+/* Анимация сплавного появления/скрытия чего-либо */
+.change-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+    position: absolute;
+}
+
+.change-exit {
+    opacity: 1;
+    position: absolute;
+}
+
+.change-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    position: absolute;
+}
+
+/* Анимация для выезда из правой части экрана */
+.slide-right-enter {
+    transform: translateX(100%);
+}
+
+.slide-right-enter-active {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+}
+
+.slide-right-exit {
+    transform: translateX(0);
+}
+
+.slide-right-exit-active {
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+}
+
+/* Анимация скрытия/раскрытия списков */
+.list-show-enter {
+    max-height: 0;
+}
+
+.list-show-enter-active {
+    max-height: 1000px;
+    transition: max-height 300ms ease-in-out;
+}
+
+.list-show-exit {
+    max-height: 1000px;
+}
+
+.list-show-exit-active {
+    max-height: 0;
+    transition: max-height 300ms ease-in-out;
+}

@@ -1,0 +1,30 @@
+.DeleteModal {
+    padding: 32px;
+    border-radius: 16px;
+
+    h2 {
+        font: $fontH3;
+        margin: 0 0 8px;
+        color: $textPrimary;
+    }
+
+    p {
+        font: $fontP4;
+        margin: 0 0 24px;
+        color: $textSecondary;
+    }
+
+    &_bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: auto;
+    }
+
+    &_button {
+        width: calc(50% - 4px);
+        justify-content: center;
+        border-radius: 16px;
+    }
+}

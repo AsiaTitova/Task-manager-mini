@@ -1,0 +1,39 @@
+.ConfirmModal {
+    position: fixed;
+    z-index: 105;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.notes {
+        .ConfirmModal_shadow {
+            background: transparent;
+            opacity: 1;
+        }
+    }
+
+    &_shadow {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $bgPrimaryInverse;
+        opacity: 0.3;
+    }
+
+    &_window {
+        position: relative;
+        z-index: 2;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        background: $bgPrimary;
+        border-radius: 16px;
+    }
+}

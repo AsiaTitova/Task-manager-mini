@@ -1,0 +1,84 @@
+@import './ButtonSize.module';
+@import './ButtonMode.module';
+
+.Button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px dashed transparent;
+  background: $bgAccent;
+  color: $textPrimaryOnColor;
+  border-radius: $borderRadiusLg;
+  outline: none;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+
+  span {
+    white-space: nowrap;
+  }
+
+  svg {
+    path {
+      fill: $iconPrimaryOnColor;
+    }
+  }
+
+  &:hover {
+    background: $bgAccentHover;
+  }
+
+  &:active {
+    background: $bgAccentActive;
+  }
+
+  &.mini {
+    justify-content: center;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.secondary {
+    @include secondary;
+  }
+
+  &.critical {
+    @include critical;
+  }
+
+  &.critical-primary {
+    @include criticalPrimary;
+  }
+
+  &.clear {
+    @include clear;
+  }
+
+  &:disabled {
+    background: $bgDisabled;
+    color: $textDisabled;
+    cursor: default;
+
+    svg path {
+      fill: $iconDisabled;
+    }
+  }
+
+  &:focus-visible {
+    border: 1px dashed $borderFocus;
+  }
+
+  &.lg {
+    @include lg;
+  }
+
+  &.md {
+    @include md;
+  }
+
+  &.sm {
+    @include sm;
+  }
+}

@@ -1,0 +1,388 @@
+.CalendarPicker {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:hover {
+    appearance: none !important;
+    background: $bgSecondary !important;
+    -webkit-text-fill-color: $textPrimary !important;
+    color: $textPrimary !important;
+    font: $fontP3  !important;
+    font-size: 16px !important;
+  }
+
+  input:-moz-autofill,
+  input:-moz-autofill:focus,
+  input:-moz-autofill:hover {
+    appearance: none !important;
+    background: $bgSecondary !important;
+    color: $textPrimary !important;
+    font: $fontP3  !important;
+    font-size: 16px !important;
+  }
+
+  &_label {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    font: $fontP4;
+    color: $textSecondary;
+    margin: 0 0 4px;
+
+    sup {
+      position: absolute;
+      top: -5px;
+    }
+  }
+
+  &_helpText {
+    margin: 2px 0 0;
+    font: $fontP7;
+    color: $textSecondary;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.1s ease;
+  }
+
+  &.showHelpText .CalendarPicker_helpText {
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  & :global(#calendarIcon) {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding: 0 !important;
+    top: 13px;
+    left: 18px;
+
+    path {
+      fill: $iconSecondary;
+    }
+  }
+
+  & :global(.react-datepicker) {
+   background: transparent;
+    border: none;
+    padding: 0;
+    font: $fontP4;
+  }
+
+  & :global(.react-datepicker__input-container) {
+    cursor: pointer;
+  }
+
+  & :global(.react-datepicker__header) {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 6px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  & :global(.react-datepicker__navigation--previous) {
+    left: 8px;
+    padding: 0 5px 0 0;
+  }
+
+  & :global(.react-datepicker__navigation--next) {
+    right: 8px;
+    padding: 0 0 0 5px;
+  }
+
+  & :global(.react-datepicker__navigation-icon) {
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  & :global(.react-datepicker__navigation-icon:before) {
+    display: none;
+  }
+
+  & :global(.react-datepicker__day-names) {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  & :global(.react-datepicker__day-name) {
+    color: $textSecondary;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+  }
+
+  & :global(.react-datepicker__month) {
+    margin: 0;
+  }
+
+  & :global(.react-datepicker__week) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  & :global(.react-datepicker__day) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    font: $fontP5;
+    margin: 0;
+
+    &:hover,
+    &:active {
+      background: $bgSecondaryHover;
+      border-radius: 4px;
+    }
+  }
+
+  & :global(.react-datepicker__day--weekend) {
+    color: $textSecondary;
+  }
+
+  & :global(.react-datepicker__day--today),
+  & :global(.react-datepicker__day--keyboard-selected) {
+    color: $textAccent;
+    background: transparent;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:active {
+      color: $textAccentHover;
+      background: transparent;
+    }
+  }
+
+  & :global(.react-datepicker__day--today) {
+    font-weight: bold;
+  }
+
+  & :global(.react-datepicker__day--selected) {
+    color: $textPrimaryInverse;
+    background: $bgAccent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active {
+      background: $bgAccentHover;
+    }
+  }
+
+  & :global(.react-datepicker__day--disabled) {
+    color: $textDisabled;
+    background: transparent;
+
+    &:hover,
+    &:active {
+      color: $textDisabled;
+      background: transparent;
+    }
+  }
+
+  & :global(.react-datepicker__triangle) {
+    display: none;
+  }
+
+  & :global(.react-datepicker__close-icon) {
+    right: 16px;
+    top: 13px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover :global(.react-datepicker__close-icon:after) {
+      background: $bgSecondaryHover;
+    }
+  }
+
+  & :global(.react-datepicker__close-icon:after) {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font: $fontP2;
+    color: $textSecondary;
+  }
+
+  & :global(.react-datepicker__calendar-icon) {
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0;
+  }
+
+  input {
+    width: 100%;
+    height: 48px;
+    border-radius: 16px;
+    padding: 14px 46px 14px 18px;
+    border: 1px solid transparent;
+    background: $bgSecondary;
+    outline: none;
+    transition: all 0.15s ease;
+    color: $textPrimary;
+    font: $fontP3;
+
+    &::placeholder {
+      color: $textSecondary;
+    }
+
+    &:hover {
+      background: $bgSecondaryHover;
+
+      &::placeholder {
+        color: $textPrimary;
+      }
+    }
+
+    &:focus-visible {
+      border: 1px dashed $borderFocus;
+    }
+
+    &:focus {
+      background: $bgPrimary;
+      border: 1px solid $borderAccent;
+    }
+  }
+
+  &_popper {
+    position: absolute !important;
+    top: 76px !important;
+    left: 0 !important;
+    transform: none !important;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: $shadowLg;
+    background-color: #F5F5F6 !important;
+    font: $fontP4;
+  }
+
+  &.disabled {
+    input {
+      background: $bgDisabled;
+      color: $textDisabled;
+
+      &::placeholder {
+        color: $textDisabled;
+      }
+    }
+
+    .CalendarPicker_helpText {
+      color: $textDisabled;
+    }
+
+    & :global(#calendarIcon) {
+      cursor: default;
+      path {
+        fill: $iconDisabled;
+      }
+    }
+  }
+
+  &.round {
+    input {
+      border-radius: 16px;
+    }
+  }
+
+  &.error {
+    input {
+      background: $bgPrimary;
+      border: 1px solid $borderCritical;
+      color: $textCritical;
+
+      &::placeholder {
+        color: $textCritical;
+      }
+    }
+
+    .CalendarPicker_helpText {
+      color: $textCritical;
+    }
+
+    & :global(#calendarIcon) path {
+      fill: $iconCritical;
+    }
+  }
+
+  &_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &_month {
+    font: $fontP6;
+    color: $textPrimary;
+  }
+
+  &_arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    background: $bgSecondary;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    svg path {
+      fill: $iconSecondary;
+    }
+
+    &:hover {
+      background: $bgSecondaryHover;
+    }
+  }
+
+  &_wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+}

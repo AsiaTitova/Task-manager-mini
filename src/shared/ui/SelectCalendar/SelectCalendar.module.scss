@@ -1,0 +1,186 @@
+.SelectCalendar {
+    max-width: 140px;
+    min-width: 140px;
+    width: 100%;
+    position: relative;
+
+    &.open {
+        .SelectCalendar_wrap {
+            background: $bgPrimary;
+            border: 1px solid $borderAccent;
+        }
+    }
+
+    &.custom .SelectCalendar_list {
+        padding: 0;
+        border-top: none;
+        max-height: 150px;
+    }
+
+    &.calendar {
+        min-width: max-content;
+
+        .SelectCalendar_wrap {
+            height: 32px;
+            border-radius: 8px;
+            padding: 7px 36px 7px 8px;
+        }
+
+        .SelectCalendar_arrow {
+            width: 32px;
+            max-width: 32px;
+            height: 32px;
+            top: 0;
+            right: 0;
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .SelectCalendar_container {
+            top: 36px;
+            max-height: 120px;
+            border-radius: 8px;
+            padding: 4px;
+            overflow: hidden;
+        }
+
+        .SelectCalendar_buttonCurrent,
+        .SelectCalendar_button {
+            display: flex;
+            border-radius: 8px;
+            padding: 4px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &_wrap {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        border-radius: 16px;
+        padding: 11px 46px 11px 16px;
+        border: 1px solid transparent;
+        background: $bgSecondary;
+        outline: none;
+        transition: all 0.15s ease;
+        color: $textPrimary;
+        font: $fontH6;
+        cursor: pointer;
+
+        &:hover {
+            background: $bgSecondaryHover;
+
+            .Select_placeholder {
+                color: $textPrimary;
+            }
+        }
+    }
+
+    &_placeholder {
+        color: $textSecondary;
+    }
+
+    &_value {
+        @include textEllipsis(1);
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+            fill: $iconSecondary;
+        }
+    }
+
+    &_arrow {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        background: transparent;
+        padding: 0;
+        max-width: 20px;
+        height: 20px;
+
+        svg {
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        &.rotate {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &_container {
+        position: absolute;
+        left: 0;
+        top: 52px;
+        z-index: 10;
+        width: 100%;
+        max-height: 160px;
+        box-shadow: $shadowMd;
+        border-radius: 16px;
+        padding: 8px;
+        background: $bgPrimary;
+    }
+
+    &_current-button {
+        justify-content: center;
+    }
+
+    &_list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 4px 0 0;
+        border-top: 1px solid $borderSecondary;
+        list-style: none;
+        overflow-y: auto;
+        max-height: 88px;
+    }
+
+    &_item {
+        width: 100%;
+        scroll-margin-top: 8px;
+    }
+
+    &_button {
+        width: 100%;
+        text-align: left;
+        color: $textAccent;
+        border-radius: 16px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background: $bgAccentSubduedHover;
+        }
+    }
+
+    &_buttonCurrent {
+        margin:  0 0 4px;
+        width: 100%;
+        text-align: left;
+        padding: 9px 14px;
+        font: $fontP8;
+        color: $textAccent;
+        border-radius: 16px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: $bgPrimary;
+
+        &:hover {
+            background: $bgAccentSubduedHover;
+        }
+    }
+}

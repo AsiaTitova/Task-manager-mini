@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "@feature-sliced/eslint-config/rules/import-order/experimental",
+    "@feature-sliced/eslint-config/rules/public-api/lite",
+    "@feature-sliced/eslint-config/rules/layers-slices",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint", "unused-imports", "prettier"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": 2,
+    "@typescript-eslint/consistent-type-imports": 2,
+    "@typescript-eslint/consistent-type-definitions": 2,
+    "@typescript-eslint/no-explicit-any": 2,
+    "@typescript-eslint/no-unused-vars": 1,
+    "react-hooks/exhaustive-deps": 0,
+    "react/display-name": 0,
+    "no-console": 2,
+    "unused-imports/no-unused-imports": 2,
+    "unused-imports/no-unused-vars": [
+      1,
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "prettier/prettier": 1,
+
+    //FSD
+    "import/no-internal-modules": 1,
+    "import/order": 1,
+    "boundaries/element-types": 1
+  }
+}

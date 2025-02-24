@@ -1,0 +1,31 @@
+.Header {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  margin: 0 0 8px;
+  height: max-content;
+
+  &_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4px 4px 4px 16px;
+    background: $bgPrimary;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  &_logo {
+
+    svg {
+      width: 200px;
+      height: auto;
+
+      path {
+        fill: $iconAccent;
+      }
+    }
+  }
+}

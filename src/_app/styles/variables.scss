@@ -1,0 +1,163 @@
+// breakpoints
+$widthBig: 1600px;
+$widthLg: 1400px;
+$widthMd: 1200px;
+$widthSm: 1000px;
+$widthSx: 767px;
+
+// fonts
+$fontFamilyMain: 'Inter', 'Arial', sans-serif;
+
+$fontH1: 700 #{36px} / #{120%} $fontFamilyMain;
+$fontH2: 700 #{32px} / #{120%} $fontFamilyMain;
+$fontH3: 700 #{24px} / #{120%} $fontFamilyMain;
+$fontH4: 700 #{18px} / #{120%} $fontFamilyMain;
+$fontH5: 700 #{16px} / #{120%} $fontFamilyMain;
+$fontH6: 700 #{14px} / #{120%} $fontFamilyMain;
+$fontH7: 700 #{12px} / #{120%} $fontFamilyMain;
+$fontH8: 700 #{10px} / #{120%} $fontFamilyMain;
+
+$fontP1: 500 #{24px} / #{120%} $fontFamilyMain;
+$fontP2: 500 #{18px} / #{120%} $fontFamilyMain;
+$fontP3: 400 #{16px} / #{120%} $fontFamilyMain;
+$fontP4: 500 #{16px} / #{120%} $fontFamilyMain;
+$fontP5: 400 #{14px} / #{120%} $fontFamilyMain;
+$fontP6: 500 #{14px} / #{120%} $fontFamilyMain;
+$fontP7: 400 #{12px} / #{120%} $fontFamilyMain;
+$fontP8: 500 #{12px} / #{120%} $fontFamilyMain;
+$fontP9: 400 #{10px} / #{120%} $fontFamilyMain;
+$fontP10: 500 #{10px} / #{120%} $fontFamilyMain;
+
+// Styleguide
+$whiteMain: #FFFFFF;
+$white600: #FFFFFFE0;
+$white500: #FFFFFFA3;
+$white400: #FFFFFF66;
+$white300: #FFFFFF24;
+$white200: #FFFFFF17;
+$white100: #FFFFFF0F;
+
+$blackMain: #08091C;
+$black600: #08091CE0;
+$black500: #08091C99;
+$black400: #08091C5C;
+$black300: #08091C1F;
+$black200: #08091C14;
+$black100: #08091C0A;
+
+$redMain: #E54545;
+$red800: #E51717;
+$red700: #E52E2E;
+$red600: #E54545E0;
+$red500: #E5454599;
+$red400: #E545455C;
+$red300: #E5454524;
+$red200: #E545451A;
+$red100: #E545450F;
+
+$orangeMain: #E5A545;
+$orange800: #E59317;
+$orange700: #E59C2E;
+$orange600: #E5A545E0;
+$orange500: #E5A54599;
+$orange400: #E5A5455C;
+$orange300: #E5A5451F;
+$orange200: #E5A5451A;
+$orange100: #E5A5450F;
+
+$greenMain: #3DCC6D;
+$green800: #3D786C;
+$green700: #3D876C;
+$green600: #3D995C;
+$green500: #3D995CE0;
+$green400: #3D995C99;
+$green300: #3D995C5C;
+$green200: #3D995C24;
+$green200: #3D995C1A;
+$green100: #3D995C0F;
+
+// colors
+
+//background
+$bgPrimary: $whiteMain;
+$bgPrimaryInverse: $black600;
+$bgSecondary: $black100;
+$bgSecondaryHover: $black200;
+$bgSecondaryActive: $black300;
+$bgSecondaryInverse: $black500;
+$bgDisabled: $black300;
+$bgAccent: $greenMain;
+$bgAccentHover: $green700;
+$bgAccentActive: $green800;
+$bgAccentSubdued: $green100;
+$bgAccentSubduedHover: $green200;
+$bgAccentSubduedActive: $green300;
+$bgCritical: $redMain;
+$bgCriticalHover: $red700;
+$bgCriticalActive: $red800;
+$bgCriticalSubdued: $red100;
+$bgCriticalSubduedHover: $red200;
+$bgCriticalSubduedActive: $red300;
+$bgCautionSubdued: $orange100;
+$bgCautionSubduedHover: $orange200;
+$bgCautionSubduedActive: $orange300;
+
+// text
+$textPrimary: $blackMain;
+$textSecondary: $black500;
+$textDisabled: $black400;
+$textAccent: $greenMain;
+$textAccentHover: $green700;
+$textAccentActive: $green800;
+$textAccentSubdued: $green100;
+$textAccentSubduedHover: $green200;
+$textAccentSubduedActive: $green300;
+$textCritical: $redMain;
+$textCriticalHover: $red700;
+$textCriticalActive: $red800;
+$textCaution: $orangeMain;
+$textCautionHover: $orange700;
+$textCautionActive: $orange800;
+$textPrimaryInverse: $whiteMain;
+$textPrimaryOnColor: $whiteMain;
+
+// border
+$borderPrimary: $black300;
+$borderSecondary: $black200;
+$borderFocus: $blackMain;
+$borderAccent: $greenMain;
+$borderAccentHover: $green700;
+$borderAccentActive: $green800;
+$borderCritical: $redMain;
+$borderCaution: $orangeMain;
+
+// icon
+$iconPrimary: $blackMain;
+$iconSecondary: $black500;
+$iconDisabled: $black400;
+$iconAccent: $greenMain;
+$iconAccentHover: $green700;
+$iconAccentActive: $green800;
+$iconAccentSubdued: $green100;
+$iconAccentSubduedHover: $green200;
+$iconAccentSubduedActive: $green300;
+$iconCritical: $redMain;
+$iconCriticalHover: $red700;
+$iconCriticalActive: $red800;
+$iconCaution: $orangeMain;
+$iconCautionHover: $orange700;
+$iconCautionActive: $orange800;
+$iconPrimaryInverse: $whiteMain;
+$iconPrimaryOnColor: $whiteMain;
+
+
+// border radius
+$borderRadiusLg: 8px;
+$borderRadiusMd: 6px;
+$borderRadiusSm: 4px;
+$borderRadiusSX: 2px;
+
+// shadow
+$shadowLg: 0 0 1px rgba(113, 128, 150, 0.24), 0 4px 4px -1px rgba(113, 128, 150, 0.05);
+$shadowMd: 0 0 1px rgba(113, 128, 150, 0.24), 0 2px 2px -1px rgba(113, 128, 150, 0.05);
+$shadowSm: 0 0 1px rgba(113, 128, 150, 0.24), 0 1px 1px -1px rgba(113, 128, 150, 0.05);

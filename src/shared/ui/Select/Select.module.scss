@@ -1,0 +1,235 @@
+.Select {
+    width: 100%;
+    position: relative;
+
+    &_wrap {
+        width: 100%;
+        height: 48px;
+        border-radius: 16px;
+        padding: 14px 46px 14px 18px;
+        border: 1px solid transparent;
+        background: $bgSecondary;
+        outline: none;
+        transition: all 0.15s ease;
+        color: $textPrimary;
+        font: $fontP3;
+        cursor: pointer;
+
+        &:hover {
+            background: $bgSecondaryHover;
+
+            .Select_placeholder {
+                color: $textPrimary;
+            }
+        }
+
+        &.open {
+            border: 1px solid $borderAccent;
+        }
+    }
+
+    &.open .Select_wrap {
+        border: 1px solid $borderAccent;
+    }
+
+    &.multi .Select_wrap {
+        display: flex;
+        align-items: center;
+        padding: 4px 16px;
+    }
+
+    &_tags {
+        @include hideScrollbar;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        overflow-x: scroll;
+    }
+
+    &_label {
+        font: $fontP4;
+        color: $textSecondary;
+        margin: 0 0 4px;
+    }
+
+    &_placeholder {
+        color: $textSecondary;
+    }
+
+    &_value {
+        @include textEllipsis(1);
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+            fill: $iconSecondary;
+        }
+    }
+
+    &.open .Select_wrap {
+        background: $bgPrimary;
+        border: 1px solid $borderAccent;
+    }
+
+    &.disabled {
+        .Select_wrap {
+            background: $bgDisabled;
+            color: $textDisabled;
+            cursor: default;
+
+            .Select_placeholder {
+                color: $textDisabled;
+            }
+        }
+
+        .Select_helpText {
+            color: $textDisabled;
+        }
+
+        .Select_arrow {
+            cursor: default;
+        }
+    }
+
+    &.error {
+        .Select_wrap {
+            background: $bgPrimary;
+            border: 1px solid $borderCritical;
+            color: $textCritical;
+
+            .Select_placeholder {
+                color: $textCritical;
+            }
+        }
+
+        .Select_helpText {
+            color: $textCritical;
+        }
+
+        svg path {
+            fill: $iconCritical;
+        }
+    }
+
+    &_wrap {
+        position: relative;
+    }
+
+    &_icon {
+        position: absolute;
+        top: 14px;
+        left: 18px;
+        width: 20px;
+        height: 20px;
+
+        svg path {
+           fill: $iconSecondary;
+        }
+    }
+
+    &_helpText {
+        margin: 2px 0 0;
+        font: $fontP7;
+        color: $textSecondary;
+    }
+
+    &_arrow {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        background: transparent;
+        padding: 0;
+
+        svg {
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease;
+
+            path {
+                fill: $iconSecondary;
+            }
+        }
+
+        &.rotate {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &_list {
+        position: absolute;
+        left: 0;
+        top: 76px;
+        z-index: 10;
+        width: 100%;
+        max-height: 188px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        box-shadow: $shadowLg;
+        border-radius: 8px;
+        padding: 8px;
+        list-style: none;
+        background-color: #F5F5F6;
+        overflow-y: scroll;
+    }
+
+    &_item {
+        width: 100%;
+        padding: 12px 16px;
+        font: $fontP6;
+        color: $textPrimary;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background: $bgSecondaryHover;
+        }
+    }
+
+    &_helpText {
+        margin: 2px 0 0;
+        font: $fontP7;
+        color: $textSecondary;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.1s ease;
+    }
+
+    &.showHelpText .Select_helpText {
+        max-height: 1000px;
+        opacity: 1;
+    }
+
+    &.md {
+        .Select {
+            &_wrap {
+                height: 40px;
+                padding: 11px 36px 10px 16px;
+                font: $fontP5;
+                border-radius: 12px;
+            }
+
+            &_arrow {
+                top: 11px;
+                right: 16px;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            &_list {
+                top: 44px;
+            }
+        }
+    }
+}

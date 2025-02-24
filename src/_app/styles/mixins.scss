@@ -1,0 +1,51 @@
+@import 'variables';
+
+@mixin hideScrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin textEllipsis($count) {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $count;
+  -webkit-box-orient: vertical;
+}
+
+// адаптивы
+
+@mixin _1440 {
+  @media screen and (max-width: $widthBig) {
+    @content;
+  }
+}
+
+@mixin _1366 {
+  @media screen and (max-width: $widthLg) {
+    @content;
+  }
+}
+
+@mixin _1024 {
+  @media screen and (max-width: $widthMd) {
+    @content;
+  }
+}
+
+@mixin _768 {
+  @media screen and (max-width: $widthSm) {
+    @content;
+  }
+}
+
+@mixin _320 {
+  @media screen and (max-width: $widthSx) {
+    @content;
+  }
+}

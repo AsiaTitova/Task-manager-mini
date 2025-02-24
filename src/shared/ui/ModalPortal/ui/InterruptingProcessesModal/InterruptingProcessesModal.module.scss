@@ -1,0 +1,40 @@
+.InterruptingProcessesModal {
+  padding: 32px;
+  border-radius: 16px;
+
+  h2 {
+    font: $fontH3;
+    margin: 0 0 8px;
+    color: $textPrimary;
+  }
+
+  &_desc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 0 24px;
+
+    p {
+      font: $fontP4;
+      color: $textSecondary;
+    }
+  }
+
+  &_bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  &_button {
+    width: calc(50% - 4px);
+    justify-content: center;
+    border-radius: 16px;
+  }
+
+  &_full {
+    width: 100%;
+  }
+}
