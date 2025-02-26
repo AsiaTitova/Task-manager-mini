@@ -5,7 +5,8 @@ import { ReactElement } from 'react'
 
 import { AppProvider } from 'app/providers/AppProvider'
 import type { AppProps } from 'next/app'
-import {Header} from "src/wigets";
+import { Header } from 'src/widgets'
+import { ToastWrapper } from 'shared/ui'
 
 const App = ({ Component, pageProps }: AppProps): ReactElement => {
   return (
@@ -13,6 +14,7 @@ const App = ({ Component, pageProps }: AppProps): ReactElement => {
         <Header />
           <div className="Content">
             <Component {...pageProps} />
+            <ToastWrapper />
           </div>
     </AppProvider>
   )

@@ -85,7 +85,7 @@ export const Toast: FC<IProps<unknown>> = ({ item }) => {
       {item.cancelLabel && (
         <Button
           className={module.Toast_button}
-          size="xs"
+          size="sm"
           label={item.cancelLabel}
         />
       )}

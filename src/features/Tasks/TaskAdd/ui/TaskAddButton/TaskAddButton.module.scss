@@ -1,0 +1,9 @@
+.TaskAddButton {
+    position: relative;
+    min-width: max-content;
+
+    &_button {
+        min-width: max-content;
+        border-radius: 12px;
+    }
+}

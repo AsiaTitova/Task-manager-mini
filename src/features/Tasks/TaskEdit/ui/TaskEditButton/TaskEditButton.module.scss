@@ -1,0 +1,12 @@
+.TaskEditButton {
+    position: relative;
+    min-width: 40px;
+
+    &_button {
+        min-width: 40px;
+        max-width: 40px;
+        justify-content: center;
+        border-radius: 12px;
+        padding: 12px !important;
+    }
+}

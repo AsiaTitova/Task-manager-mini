@@ -1,0 +1,18 @@
+.EmptyList {
+  width: 100%;
+  padding: 16px;
+  background: $bgPrimary;
+  border-radius: 16px;
+
+  h2 {
+    margin: 0 0 8px;
+    font: $fontH4;
+    color: $textPrimary;
+  }
+
+  p {
+    margin: 0 0 16px;
+    font: $fontP6;
+    color: $textPrimary;
+  }
+}
